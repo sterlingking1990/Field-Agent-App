@@ -19,8 +19,8 @@ class OnBoardingAdapter(var onBoardItems: MutableList<OnBoardItem>): RecyclerVie
 
         fun setOnBoardingData(onBoardItem: OnBoardItem) {
             imageViewHeader.setImageResource(onBoardItem.onBoardingImage)
-            textViewHeader.text = onBoardItem.onBoardingHeaderText
-            textViewSubText.text = onBoardItem.onBoardingSubText
+            textViewHeader.setText(onBoardItem.onBoardingHeaderText)
+            textViewSubText.setText(onBoardItem.onBoardingSubText)
         }
     }
 

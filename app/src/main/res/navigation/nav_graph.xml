@@ -9,10 +9,16 @@
         android:id="@+id/introFragment"
         android:name="com.trapezoidlimited.groundforce.ui.onboarding.IntroFragment"
         android:label="fragment_intro"
-        tools:layout="@layout/fragment_intro" />
+        tools:layout="@layout/fragment_intro" >
+    </fragment>
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.trapezoidlimited.groundforce.ui.onboarding.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" />
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.trapezoidlimited.groundforce.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" />
 </navigation>

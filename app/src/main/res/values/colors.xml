@@ -4,8 +4,9 @@
     <color name="colorPrimaryDark">#32AEBA</color>
     <color name="colorAccent">#3FBAC2</color>
     <color name="colorSignUp">#E35948</color>
-    <color name="colorTextPrimary">#000000</color>
+    <color name="colorClearButton">#0000001f</color>
     <color name="colorTextSecondary">#363636</color>
+    <color name="colorTextPrimary">#000000</color>
     <color name="colorBorderLine">#707070</color>
     <color name="colorBackground">#FFFFFF</color>
     <color name="colorBackgroundOverlay">#205D61</color>

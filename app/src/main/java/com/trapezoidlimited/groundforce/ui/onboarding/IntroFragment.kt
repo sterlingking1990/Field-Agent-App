@@ -1,5 +1,6 @@
 package com.trapezoidlimited.groundforce.ui.onboarding
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -20,11 +21,16 @@ class IntroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        /**move to view pager fragment after 2secs**/
+        /**move to view pager fragment after 3secs**/
         Handler(Looper.myLooper()!!).postDelayed({
+            /***if the user has already navigated through the boarding screen before, send the user to the sign up fragment**/
+            if(onBoardingFinish()){
+                findNavController().navigate(R.id.signUpFragment)
+            }
+            else{
+                findNavController().navigate(R.id.onBoardingFragment)
+            }
 
-            findNavController().navigate(R.id.onBoardingFragment)
         }, 2000)
 
         /**Inflate the layout for this fragment using viewBinding**/
@@ -38,5 +44,12 @@ class IntroFragment : Fragment() {
         super.onDestroyView()
         /***set binding back to null**/
         _binding = null
+    }
+
+    /**check on boarding state**/
+    private fun onBoardingFinish(): Boolean{
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+
+        return sharedPref.getBoolean("Finished", false)
     }
 }

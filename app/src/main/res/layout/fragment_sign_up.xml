@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/man_on_the_screen"
+    tools:context=".SignUpFragment">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroundOverlay"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/signUp_welcome_text_tv"
+        android:layout_width="286dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="287dp"
+        android:layout_marginStart="37dp"
+        android:layout_marginEnd="37dp"
+        android:text="@string/welcome_trooper"
+        android:textSize="30sp"
+        android:textAlignment="center"
+        android:fontFamily="@font/titillium_web"
+        android:textStyle="bold"
+        android:textColor="@color/colorBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/signUp_welcome_text_2_tv"
+        android:layout_width="266dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginEnd="47dp"
+        android:text="@string/meet_you"
+        android:textSize="14dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorBackground"
+        android:fontFamily="@font/roboto"
+        app:layout_constraintTop_toBottomOf="@id/signUp_welcome_text_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUp_create_account_btn"
+        android:layout_marginTop="130dp"
+        app:cornerRadius="40dp"
+        android:text="@string/create_account"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintTop_toBottomOf="@id/signUp_welcome_text_tv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/sign_up_button_style" />
+    
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUp_signIn_btn"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="40dp"
+        android:text="@string/new_here"
+        android:backgroundTint="@color/colorClearButton"
+        app:layout_constraintTop_toBottomOf="@id/signUp_create_account_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/sign_up_button_style"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/signUp_google_btn"
+        android:layout_marginTop="12dp"
+        app:cornerRadius="40dp"
+        android:text="@string/sign_google"
+        android:backgroundTint="@color/colorSignUp"
+        app:layout_constraintTop_toBottomOf="@id/signUp_signIn_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/sign_up_button_style"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

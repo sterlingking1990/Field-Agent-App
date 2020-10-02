@@ -1,11 +1,13 @@
 package com.trapezoidlimited.groundforce.ui.onboarding
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayoutMediator
 import com.trapezoidlimited.groundforce.R
@@ -44,12 +46,18 @@ class OnBoardingFragment : Fragment() {
             }
         })
 
-
         /**setting the tab layout using tab layout mediator**/
         TabLayoutMediator(binding.tab, binding.viewPager){ t, position ->
 
         }.attach() /**connect tab to viewpager**/
 
+        /**move to next on boarding screen**/
+        binding.btn.setOnClickListener {
+            findNavController().navigate(R.id.signUpFragment)
+
+            /***save on boarding state**/
+            onBoardingFinish()
+        }
 
         return binding.root
     }
@@ -63,25 +71,26 @@ class OnBoardingFragment : Fragment() {
         binding.viewPager.currentItem = binding.viewPager.currentItem + 1
     }
 
+    /***set up recycler item**/
     private fun setUpOnBoardingItems() {
         val onBoardingItems = mutableListOf<OnBoardItem>()
 
         val itemLiveEarn = OnBoardItem(
-            onBoardingImage = R.drawable.zaria_boy,
-            onBoardingHeaderText = "Earn Because You \nLive Where You Live",
-            onBoardingSubText = "Complete simple tasks on your mobile \nphone and around your location."
+             R.drawable.zaria_boy,
+            R.string.splash_1_big_text,
+           R.string.splash_1_small_text
         )
 
         val itemGetDone = OnBoardItem(
-            onBoardingImage = R.drawable.abj_girl,
-            onBoardingHeaderText = "Don't Get too far to \nGet Things Done",
-            onBoardingSubText = "Distance is not a barrier. Verify addresses \nclose to you and earn cool cash!"
+             R.drawable.abj_girl,
+            R.string.splash_2_big_text,
+            R.string.splash_2_small_text
         )
 
         val itemMoreWithGroundForce = OnBoardItem(
-            onBoardingImage = R.drawable.lagos_girl,
-            onBoardingHeaderText = "Do more, Earn more \nWith GroundForce",
-            onBoardingSubText = "More missions, more survey, more \nmoney!"
+             R.drawable.lagos_girl,
+            R.string.splash_3_big_text,
+            R.string.splash_3_small_text
         )
 
         onBoardingItems.add(itemLiveEarn)
@@ -91,6 +100,17 @@ class OnBoardingFragment : Fragment() {
         onBoardingAdapter = OnBoardingAdapter(onBoardingItems)
 
 
+    }
+
+    /**check if on boarding screen have been visited before**/
+    private fun onBoardingFinish(){
+        val sharedPref = requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+
+        val editor = sharedPref.edit()
+
+        editor.putBoolean("Finished", true)
+
+        editor.apply()
     }
 
 
