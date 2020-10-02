@@ -1,4 +1,4 @@
-package com.trapezoidlimited.groundforce.model
+package com.trapezoidlimited.groundforce.ui.onboarding.model
 
 data class OnBoardItem(
     val onBoardingImage: Int,

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Groundforce</string>
+
+    <string name="splash_1_big_text">Earn Because You Live Where You Live</string>
+    <string name="splash_1_small_text">Complete simple tasks on your mobile phone and around your location.</string>
+    <string name="splash_2_big_text">Don\'t Get Too Far To Get Things Done</string>
+    <string name="splash_2_small_text">Distance is not a barrier. Verify addresses close to you and earn cool cash!</string>
+    <string name="splash_3_big_text">Do More, Earn More With Groundforce</string>
+    <string name="splash_3_small_text">More missions, more surveys, more money!</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

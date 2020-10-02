@@ -1,4 +1,4 @@
-package com.trapezoidlimited.groundforce.ui.adapter
+package com.trapezoidlimited.groundforce.ui.onboarding.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,14 +6,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.ViewPager2
 import com.trapezoidlimited.groundforce.R
-import com.trapezoidlimited.groundforce.model.OnBoardItem
+import com.trapezoidlimited.groundforce.ui.onboarding.model.OnBoardItem
 import kotlinx.android.synthetic.main.item_container_onboarding.view.*
 
 class OnBoardingAdapter(var onBoardItems: MutableList<OnBoardItem>): RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>() {
 
-    inner class OnBoardingViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+     class OnBoardingViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         private val imageViewHeader: ImageView = itemView.main_item_onBoarding_iv
         private val textViewHeader: TextView = itemView.main_item_onBoarding_header_tv
         private val textViewSubText: TextView = itemView.main_item_onBoarding_subtext_tv
