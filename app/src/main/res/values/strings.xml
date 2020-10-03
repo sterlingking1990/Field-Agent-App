@@ -12,4 +12,8 @@
     <string name="create_account">Create Account</string>
     <string name="new_here">I\'m Not New Here</string>
     <string name="sign_google">Sign Up With Google</string>
+    <string name="enter_phone_number">Enter Phone Number</string>
+    <string name="will_text_you">We\'ll text you a code to verify your mobile number.</string>
+    <string name="t_and_c">By clicking "Continue", you are accepting our Terms &amp; Conditions as well as our Privacy Policy</string>
+    <string name="continue_text">Continue</string>
 </resources>

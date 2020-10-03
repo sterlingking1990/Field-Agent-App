@@ -12,5 +12,6 @@
     <color name="colorBackgroundOverlay">#205D61</color>
     <color name="colorTextLink">#3867B0</color>
     <color name="colorSuccess">#00A769</color>
+    <color name="colorSpan">#1848E6</color>
 
 </resources>

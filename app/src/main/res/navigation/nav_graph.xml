@@ -18,7 +18,12 @@
         tools:layout="@layout/fragment_on_boarding" />
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.trapezoidlimited.groundforce.SignUpFragment"
+        android:name="com.trapezoidlimited.groundforce.ui.signup.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/phoneVerificationFragment"
+        android:name="com.trapezoidlimited.groundforce.ui.signup.PhoneVerificationFragment"
+        android:label="fragment_phone_verification"
+        tools:layout="@layout/fragment_phone_verification" />
 </navigation>
