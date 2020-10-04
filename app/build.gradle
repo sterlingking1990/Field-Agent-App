@@ -78,4 +78,11 @@ dependencies {
 
     //country code picker
     implementation 'com.hbb20:ccp:2.4.0'
+
+    //pinView/OTP view
+   // implementation 'com.poovam:pin-edittext-field:1.2.3'
+   // implementation 'com.chaos.view:pinview:1.4.4'
+
+    //otp
+    implementation 'com.github.mukeshsolanki:android-otpview-pinview:2.1.0'
 }

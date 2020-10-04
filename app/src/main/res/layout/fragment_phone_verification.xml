@@ -4,8 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="20dp"
+    android:background="@color/colorBackground"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.signup.PhoneVerificationFragment">
+    
+    <LinearLayout
+        android:id="@+id/verification_header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="31dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="31dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/enter_phone_number"
+        app:layout_constraintStart_toStartOf="parent">
+        
+        <ImageView
+            android:id="@+id/verification_back_arrow"
+            android:src="@drawable/ic_arrow"
+            app:tint="@color/colorTextPrimary"
+            style="@style/back_arrow_style" />
+        <TextView
+            android:id="@+id/verification_header"
+            android:text="@string/phone_verification"
+            style="@style/header_style" />
+    </LinearLayout>
+
 
    <TextView
        android:id="@+id/enter_phone_number"
