@@ -6,9 +6,9 @@ name: CI
 # events but only for the onboarding branch
 on:
   push:
-    branches: [ onboarding ]
+    branches: [ modifySignUp ]
   pull_request:
-    branches: [ onboarding ]
+    branches: [ modifySignUp ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
