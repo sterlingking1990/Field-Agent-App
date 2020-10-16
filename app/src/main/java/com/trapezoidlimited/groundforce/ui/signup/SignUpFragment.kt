@@ -23,11 +23,15 @@ class SignUpFragment : Fragment() {
         // Inflate the layout for this fragment
         _binding = FragmentSignUpBinding.inflate(inflater, container, false)
 
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         /**move to create account**/
         binding.signUpCreateAccountBtn.setOnClickListener {
             findNavController().navigate(R.id.phoneVerificationFragment)
         }
-        return binding.root
+        super.onViewCreated(view, savedInstanceState)
     }
 
 

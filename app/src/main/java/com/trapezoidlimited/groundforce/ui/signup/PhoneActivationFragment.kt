@@ -25,10 +25,14 @@ class PhoneActivationFragment : Fragment() {
     private var _binding : FragmentPhoneActivationBinding? = null
     private val binding get() = _binding!!
 
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
+
+
         // Inflate the layout for this fragment
         _binding = FragmentPhoneActivationBinding.inflate(inflater, container, false)
 
@@ -36,8 +40,8 @@ class PhoneActivationFragment : Fragment() {
 
 
         /**show soft key to enable otp input**/
-        showKeyboard(requireContext())
-        binding.pinView.requestFocus()
+        //showKeyboard(requireContext())
+        //binding.pinView.requestFocus()
 
         /**convert string to spannable and make some parts clickable**/
         val fullText = "Didn't get the code Resend."
@@ -65,6 +69,15 @@ class PhoneActivationFragment : Fragment() {
         }
 
        return  binding.root
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        binding.pinView.setOtpCompletionListener {
+            Log.d("onOtpCompleted=>", it)
+        }
+        super.onViewCreated(view, savedInstanceState)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
