@@ -6,7 +6,7 @@ name: CI
 # events but only for the onboarding branch
 on:
   push:
-    branches: [ onboarding ]
+    branches: [ modifySignUp ]
   pull_request:
     branches: [ onboarding ]
 
