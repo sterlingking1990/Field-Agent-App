@@ -61,7 +61,7 @@ class PhoneVerificationFragment : Fragment() {
             }
         }
 
-        spannableString.setSpan(clickableSpan1, 46, 65, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+        spannableString.setSpan(clickableSpan1, 40, 65, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
         spannableString.setSpan(clickableSpan2, 80, 94, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
 
         binding.tAndCTv.setText(spannableString)
@@ -82,8 +82,8 @@ class PhoneVerificationFragment : Fragment() {
 
 
 
-    override fun onDestroyView() {
-        super.onDestroyView()
+    override fun onDestroy() {
+        super.onDestroy()
         _binding = null
     }
 
